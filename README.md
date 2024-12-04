@@ -2,6 +2,10 @@
 
 ## Explicação do código das PLs
 
+Definição das Agendas
+Definição de Recursos Humanos
+Definição de Cirurgias
+
 Manipulação de Agendas Livres
 Funções free_agenda0/2 e free_agenda1/2
 Essas funções geram intervalos livres na agenda de um profissional ou sala, considerando as ocupações já registradas.
