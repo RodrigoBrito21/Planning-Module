@@ -165,5 +165,25 @@ diferentes opções de planejamento para atender a várias demandas de hospitais
 
 
 
+# Principais diferenças presentes
+
+Principais diferenças presentes no nosso Código que não estão no código base:
+
+get_staff_for_surgeries(OpCode, Specializatity, LStaff) :-
+surgery_id(OpCode, OpType),
+findall(StaffId, (staff(StaffId, _, Specializatity, Specializations),
+member(OpType, Specializations)), LStaff).
+
+( lógica para determinar quais médicos podem realizar cirurgias específicas com base na sua especialização )
+
+
+
+sumTemp(OperationType, TResult):-
+surgery(OperationType, TAnas, TSur, TClean),
+TResult is TAnas + TSur + TClean.
+
+( serve para sumar os tempos de Anastesia, sirurgia e cleaning )
+
+
 
 
